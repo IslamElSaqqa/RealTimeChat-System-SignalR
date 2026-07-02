@@ -5,10 +5,12 @@
 ![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?style=for-the-badge&logo=dotnet)
 ![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-8.0-512BD4?style=for-the-badge&logo=dotnet)
 ![SignalR](https://img.shields.io/badge/SignalR-Real--Time-success?style=for-the-badge)
-![Entity Framework](https://img.shields.io/badge/Entity_Framework_Core-8.0-purple?style=for-the-badge)
+![Entity Framework Core](https://img.shields.io/badge/Entity_Framework_Core-8.0-purple?style=for-the-badge)
 ![SQL Server](https://img.shields.io/badge/SQL_Server-red?style=for-the-badge&logo=microsoftsqlserver)
 ![JWT](https://img.shields.io/badge/JWT-Authentication-orange?style=for-the-badge)
+![ASP.NET Identity](https://img.shields.io/badge/ASP.NET_Identity-Security-blue?style=for-the-badge)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=for-the-badge&logo=bootstrap)
+![Windows Forms](https://img.shields.io/badge/Windows_Forms-.NET_8-0078D6?style=for-the-badge)
 
 **A real-time chat platform built with ASP.NET Core 8, SignalR, Entity Framework Core, SQL Server, JWT Authentication, ASP.NET Identity, ASP.NET MVC, and Windows Forms, enabling secure, real-time communication across web and desktop clients.**
 
@@ -16,19 +18,15 @@
 
 ---
 
-## 🎥 Demo
+# 🎥 Demo
 
-📹 **Watch the project demo here**
-
-```
-https://vimeo.com/1206461262
-```
+[![Watch Demo](https://img.shields.io/badge/▶️-Watch_Demo-red?style=for-the-badge)](https://vimeo.com/1206461262)
 
 ---
 
-## 📸 Screenshots
+# 📸 Screenshots
 
-### 🌐 MVC Web Application
+### 🌐 ASP.NET MVC Client
 
 <p align="center">
     <img src="ChatDesign/Client.png" width="100%">
@@ -36,7 +34,7 @@ https://vimeo.com/1206461262
 
 ---
 
-### 🖥️ Windows Forms Desktop Client
+### 🖥️ Windows Forms Client
 
 <p align="center">
     <img src="ChatDesign/Desktop.png" width="70%">
@@ -44,39 +42,41 @@ https://vimeo.com/1206461262
 
 ---
 
-## ✨ Features
+# ✨ Features
 
-- 🔐 JWT Authentication & ASP.NET Identity
-- 💬 Real-time communication using SignalR
-- 🏠 Create, join and delete chat rooms
-- 📜 Persistent message history
-- 👥 Online users tracking
+- 🔐 User Registration & Login using ASP.NET Identity
+- 🛡️ JWT Authentication & Authorization
+- 💬 Real-time messaging with SignalR
+- 🏠 Create, Join and Delete Chat Rooms
+- 📜 Persistent Chat History
+- 👥 Live Online Users Tracking
 - 🌐 ASP.NET MVC Web Client
 - 🖥️ Windows Forms Desktop Client
-- ⚡ Live synchronization across all connected clients
+- ⚡ Real-time synchronization across connected clients
+- 🗄️ SQL Server database with Entity Framework Core
 
 ---
 
-## 🏗️ Architecture
+# 🏗️ Architecture
 
 ```text
-                ASP.NET MVC Client
-                        │
-                        │ REST API + SignalR
-                        │
-Windows Forms Client ───┤
-                        │
-                  ASP.NET Core API
-        (Controllers • SignalR • Identity)
-                        │
-             Entity Framework Core
-                        │
-                   SQL Server
+                  ASP.NET MVC Client
+                         │
+                         │ REST API + SignalR
+                         │
+Windows Forms Client ────┤
+                         │
+                  ASP.NET Core Web API
+       (Controllers • SignalR • Identity)
+                         │
+              Entity Framework Core
+                         │
+                    SQL Server
 ```
 
 ---
 
-## 🛠️ Technologies
+# 🛠️ Technologies
 
 - ASP.NET Core 8 Web API
 - ASP.NET MVC
@@ -91,105 +91,123 @@ Windows Forms Client ───┤
 
 ---
 
-## 🚀 Getting Started
+# 🚀 Getting Started
+
+Clone the repository
 
 ```bash
 git clone https://github.com/IslamElSaqqa/RealTimeChat-System-SignalR.git
 ```
 
-Update the connection string inside:
+Configure your SQL Server connection string inside:
 
-```
+```text
 API/appsettings.json
 ```
 
-Apply migrations:
+Apply Entity Framework migrations
 
 ```bash
 dotnet ef database update
 ```
 
-Run:
+Run the projects in the following order:
 
-- API
-- MVC
-- Windows Forms (optional)
+1. API
+2. Web (MVC)
+3. Desktop (Windows Forms) *(Optional)*
 
 ---
 
-## 📂 Project Folder Structure
-
-```
-## 📂 Project Structure
+# 📂 Project Structure
 
 ```text
 AdvancedChat
 │
 ├── API/                           # ASP.NET Core 8 Web API
-│   ├── Controllers/               # REST API endpoints
-│   ├── Data/                      # DbContext and EF Core configuration
-│   ├── DTOs/                      # Data Transfer Objects
-│   ├── Hubs/                      # SignalR Hub
-│   ├── Migrations/                # Entity Framework Core migrations
-│   ├── Models/                    # Domain entities
-│   ├── Services/                  # Business logic & JWT services
+│   ├── Controllers/
+│   ├── Data/
+│   ├── DTOs/
+│   ├── Hubs/
+│   ├── Migrations/
+│   ├── Models/
+│   ├── Services/
 │   ├── Program.cs
 │   └── appsettings.json
 │
 ├── Web/                           # ASP.NET MVC Client
-│   ├── Controllers/               # MVC controllers
-│   ├── DTOs/                      # API response/request models
-│   ├── Models/                    # MVC models
-│   ├── Services/                  # API communication services
-│   ├── ViewModels/                # ViewModels for MVC views
-│   ├── Views/                     # Razor Views
-│   ├── wwwroot/                   # CSS, JavaScript, images
+│   ├── Controllers/
+│   ├── DTOs/
+│   ├── Models/
+│   ├── Services/
+│   ├── ViewModels/
+│   ├── Views/
+│   ├── wwwroot/
 │   ├── Program.cs
 │   └── appsettings.json
 │
 ├── Desktop/                       # Windows Forms Client
-│   ├── Forms/                     # Login & Chat forms
-│   ├── Models/                    # Desktop models
-│   ├── Services/                  # API & SignalR services
+│   ├── Forms/
+│   ├── Models/
+│   ├── Services/
 │   ├── Program.cs
 │   └── Desktop.csproj
 │
-├── ChatDesign/                    # Screenshots & demo assets
+├── ChatDesign/
 │   ├── Client.png
 │   └── Desktop.png
 │
-├── AdvancedChat.sln               # Visual Studio solution
-├── README.md                      # Project documentation
-└── .gitignore                     # Git ignore rules
-```
-
+├── AdvancedChat.sln
+├── README.md
+└── .gitignore
 ```
 
 ---
 
+# 📚 Learning Outcomes
+
+This project demonstrates practical experience with:
+
+- Building RESTful APIs using ASP.NET Core 8
+- Real-time communication using SignalR
+- JWT Authentication & ASP.NET Identity
+- Entity Framework Core (Code First)
+- SQL Server database design
+- Layered Architecture
+- Dependency Injection
+- Multi-client application development
+- Cross-platform communication between Web and Desktop clients
+
 ---
 
-## 👨‍💻 Author
+# 👨‍💻 About the Author
 
-### Islam Ashraf Mahmoud Elsaqqa
+**Islam Ashraf Mahmoud Elsaqqa**
 
 **Full-Stack .NET Developer | Software Engineer**
 
-**ITI 9-Month Graduate – Professional Development & BI-Infused CRM Track**
+🎓 **ITI 9-Month Professional Program – Professional Development & BI-Infused CRM Track**
 
 <p align="left">
-  <a href="https://www.linkedin.com/in/islam-elsaqqa/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-Islam%20Elsaqqa-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-  </a>
 
-  <a href="https://github.com/IslamElSaqqa" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-IslamElSaqqa-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
-  </a>
+<a href="https://www.linkedin.com/in/islam-elsaqqa/">
+    <img src="https://img.shields.io/badge/LinkedIn-Islam%20Elsaqqa-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
 
-  <a href="mailto:islamelsaqqa2002@gmail.com">
-    <img src="https://img.shields.io/badge/Email-Contact%20Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
-  </a>
+<a href="https://github.com/IslamElSaqqa">
+    <img src="https://img.shields.io/badge/GitHub-IslamElSaqqa-181717?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
+
+<a href="mailto:islamelsaqqa2002@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-islamelsaqqa2002%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/>
+</a>
+
 </p>
 
-⭐ If you found this project useful, consider giving it a **Star** on GitHub!
+---
 
+<div align="center">
+
+⭐ **If you found this project helpful, consider giving it a Star!**
+
+</div>
