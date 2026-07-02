@@ -167,23 +167,29 @@ AdvancedChat
 
 ---
 
+---
+
 ## 👨‍💻 Author
 
-**Islam Ashraf Mahmoud Elsaqqa**
+### Islam Ashraf Mahmoud Elsaqqa
 
-**Full-Stack .NET Developer | Software Engineer | ITI 9-month Graduate**
-**Professional Development & BI-Infused CRM Track**
+**Full-Stack .NET Developer | Software Engineer**
 
-<a href="https://www.linkedin.com/in/islam-elsaqqa/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-Islam%20Ashraf%20Mahmoud-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
-</a>
+**ITI 9-Month Graduate – Professional Development & BI-Infused CRM Track**
 
-<a href="https://github.com/IslamElSaqqa" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-YOUR--GITHUB--USERNAME-181717?style=for-the-badge&logo=github&logoColor=white"/>
-</a>
+<p align="left">
+  <a href="https://www.linkedin.com/in/islam-elsaqqa/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-Islam%20Elsaqqa-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
 
-<a href="mailto:islamelsaqqa2002@gmail.com">
-    <img src="https://img.shields.io/badge/Email-Contact%20Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/>
-</a>
+  <a href="https://github.com/IslamElSaqqa" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-IslamElSaqqa-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+  </a>
 
+  <a href="mailto:islamelsaqqa2002@gmail.com">
+    <img src="https://img.shields.io/badge/Email-Contact%20Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
+  </a>
 </p>
+
+⭐ If you found this project useful, consider giving it a **Star** on GitHub!
+
