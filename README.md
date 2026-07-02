@@ -117,14 +117,51 @@ Run:
 
 ---
 
-## 📂 Project Structure
+## 📂 Project Folder Structure
 
 ```
-AdvancedChat-System
+## 📂 Project Structure
+
+```text
+AdvancedChat
 │
-├── API (WEB API)
-├── Web (MVC-Application)
-└── Desktop (WinForms)
+├── API/                           # ASP.NET Core 8 Web API
+│   ├── Controllers/               # REST API endpoints
+│   ├── Data/                      # DbContext and EF Core configuration
+│   ├── DTOs/                      # Data Transfer Objects
+│   ├── Hubs/                      # SignalR Hub
+│   ├── Migrations/                # Entity Framework Core migrations
+│   ├── Models/                    # Domain entities
+│   ├── Services/                  # Business logic & JWT services
+│   ├── Program.cs
+│   └── appsettings.json
+│
+├── Web/                           # ASP.NET MVC Client
+│   ├── Controllers/               # MVC controllers
+│   ├── DTOs/                      # API response/request models
+│   ├── Models/                    # MVC models
+│   ├── Services/                  # API communication services
+│   ├── ViewModels/                # ViewModels for MVC views
+│   ├── Views/                     # Razor Views
+│   ├── wwwroot/                   # CSS, JavaScript, images
+│   ├── Program.cs
+│   └── appsettings.json
+│
+├── Desktop/                       # Windows Forms Client
+│   ├── Forms/                     # Login & Chat forms
+│   ├── Models/                    # Desktop models
+│   ├── Services/                  # API & SignalR services
+│   ├── Program.cs
+│   └── Desktop.csproj
+│
+├── ChatDesign/                    # Screenshots & demo assets
+│   ├── Client.png
+│   └── Desktop.png
+│
+├── AdvancedChat.sln               # Visual Studio solution
+├── README.md                      # Project documentation
+└── .gitignore                     # Git ignore rules
+```
 
 ```
 
