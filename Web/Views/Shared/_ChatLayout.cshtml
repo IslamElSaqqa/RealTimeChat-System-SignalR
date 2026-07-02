@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Web</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Web.styles.css" asp-append-version="true" />
+    <style>
+        /*
+            The Chat page is a full-screen app view, not a regular content
+            page. The shared _Layout.cshtml uses a "sticky footer" pattern
+            (footer with position: absolute; bottom: 0) that is fine for
+            short content pages, but overlaps the bottom of any tall,
+            viewport-height element like .chat-container - which is exactly
+            where the message textbox and Send button live. That overlap
+            was silently swallowing every click/keystroke aimed at
+            #txtMessage and #btnSend. This dedicated layout skips the
+            site nav/footer entirely so the chat UI owns the full viewport
+            with nothing rendered on top of it.
+        */
+        html, body {
+            margin: 0;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    @RenderBody()
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

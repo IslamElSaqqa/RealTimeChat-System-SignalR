@@ -1,0 +1,63 @@
+﻿@using AdvancedChat.Web.ViewModels
+@model RegisterViewModel
+
+<div class="container mt-5">
+
+    <h2>Register</h2>
+
+    @if (!string.IsNullOrEmpty(ViewBag.Error))
+    {
+        <div class="alert alert-danger" role="alert">
+            @ViewBag.Error
+        </div>
+    }
+
+    <form asp-action="Register" method="post">
+
+        <div class="mb-3">
+
+            <label>Full Name</label>
+
+            <input asp-for="FullName"
+                   class="form-control"
+                   required />
+
+        </div>
+
+        <div class="mb-3">
+
+            <label>Email</label>
+
+            <input asp-for="Email"
+                   type="email"
+                   class="form-control"
+                   required />
+
+        </div>
+
+        <div class="mb-3">
+
+            <label>Password</label>
+
+            <input asp-for="Password"
+                   type="password"
+                   class="form-control"
+                   required />
+
+        </div>
+
+        <button type="submit" class="btn btn-success">
+
+            Register
+
+        </button>
+
+        <a href="@Url.Action("Login", "Auth")" class="btn btn-secondary">
+
+            Back to Login
+
+        </a>
+
+    </form>
+
+</div>
